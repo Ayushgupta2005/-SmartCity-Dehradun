@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smartcity-dehradun
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: WEATHER_API_KEY
+        value: 55a0744cbdde0e9ab92842d85bcf157b
+      - key: EWS_API_KEY
+        value: be6fcde483ad483e91ab40baa4696fbd
