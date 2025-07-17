@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>📰 Dehradun News</title>
+    <meta http-equiv="refresh" content="60">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+        }
+
+        .container {
+            padding: 30px 10%;
+        }
+
+        .news-card {
+            background-color: white;
+            border-left: 6px solid #cc0000;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .news-card h3 {
+            margin: 0 0 10px;
+            color: #b30000;
+        }
+
+        .news-card p {
+            margin: 0 0 10px;
+            line-height: 1.6;
+        }
+
+        .source {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #cc0000;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .read-more:hover {
+            background-color: #990000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📰 Top Dehradun News</h1>
+    </header>
+
+    <div class="container">
+        {% if articles %}
+            {% for article in articles %}
+                <div class="news-card">
+                    <h3>{{ article.title }}</h3>
+                    <p>{{ article.description or "No description available." }}</p>
+                    <div class="source">📍 {{ article.source.name }} | 🕒 {{ article.publishedAt[:10] }}</div>
+                    <a href="{{ article.url }}" target="_blank" class="read-more">🔗 Read More</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No news available at the moment.</p>
+        {% endif %}
+    </div>
+
+    <footer>
+        &copy; {{ now().year }} Smart City Dehradun | NEWS 
+    </footer>
+
+</body>
+</html>

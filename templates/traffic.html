@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Traffic in Dehradun</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #003366;
+            padding: 20px;
+            background-color: #e6f2ff;
+            margin: 0;
+        }
+        #map {
+            height: 90vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚦 Real-Time Traffic in Dehradun</h1>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            const dehradun = { lat: 30.3165, lng: 78.0322 };
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: dehradun
+            });
+
+            const trafficLayer = new google.maps.TrafficLayer();
+            trafficLayer.setMap(map);
+        }
+    </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOtXBTnWqPNOejz88xNNxLEqHI0FV3Wgw&callback=initMap"></script>
+</body>
+</html>

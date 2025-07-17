@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather - Smart City Dehradun</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #c6e6fb, #f4faff);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #ffffffcc;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        h1 {
+            text-align: center;
+            color: #0d6efd;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #0077b6;
+        }
+        .week {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .day {
+            flex: 1 1 calc(25% - 1rem);
+            background: #edf6ff;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #c2e0ff;
+        }
+        .day p {
+            margin: 8px 0;
+        }
+        strong {
+            color: #1d3557;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Live Weather in Dehradun</h1>
+
+        <div class="card">
+            <h2>Current Weather</h2>
+            <p><strong>Temperature:</strong> {{ weather.temp }}°C</p>
+            <p><strong>Feels Like:</strong> {{ weather.feels_like }}°C</p>
+            <p><strong>Humidity:</strong> {{ weather.humidity }}%</p>
+            <p><strong>Wind Speed:</strong> {{ weather.wind }} m/s</p>
+            <p><strong>Description:</strong> {{ weather.description }}</p>
+        </div>
+    </div>
+</body>
+</html>

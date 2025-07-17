@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart City Management Platform - Dehradun</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00416a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            color: #00416a;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00416a;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .btn:hover {
+            background-color: #006494;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smart City Management Platform - Dehradun</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>🚦 Traffic Management</h2>
+            <p>Live traffic conditions Of Dehradun.</p>
+            <a href="/traffic" class="btn">View Traffic</a>
+        </div>
+
+        <div class="card">
+            <h2>🌍 Weather Monitoring</h2>
+            <p>Check current weather for Dehradun.</p>
+            <a href="/weather" class="btn">View Weather</a>
+        </div>
+
+        <div class="card">
+            <h2>🗑️ Waste Management</h2>
+            <p> Waste pickup requests And Collection status.</p>
+            <a href="/waste/user" class="btn">User Panel</a>
+            <a href="/waste/admin" class="btn" style="background-color: #28a745;">Admin Panel</a>
+        </div>
+
+        <div class="card">
+            <h2>🏞️ Tourism & Places</h2>
+            <p>Explore Dehradun's top attractions, cafes, temples, and nature spots.</p>
+            <a href="/tourism" class="btn">Explore</a>
+        </div>
+
+        <div class="card">
+            <h2>📰 Dehradun News</h2>
+            <p>Get the latest news updates for Dehradun city.</p>
+            <a href="/news" class="btn">Read News</a>
+        </div>
+    </div>
+</body>
+</html>

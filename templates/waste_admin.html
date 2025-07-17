@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Waste Bin Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8B008B;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #9400D3;
+            color: white;
+        }
+        form {
+            display: inline;
+        }
+        button {
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #6a0dad;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>👩‍💼 Waste Bin Admin Panel</h1>
+        <p>View and update the bin collection status</p>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Bin ID</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bin in bins %}
+                <tr>
+                    <td>{{ bin[0] }}</td>
+                    <td>{{ bin[1] }}</td>
+                    <td>{{ bin[2] }}</td>
+                    <td>
+                        {% if bin[2] != 'Collected' %}
+                        <form method="post">
+                            <input type="hidden" name="id" value="{{ bin[0] }}">
+                            <button type="submit">✅ Mark Collected</button>
+                        </form>
+                        {% else %}
+                        ✅ Collected
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

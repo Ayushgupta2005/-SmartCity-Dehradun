@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tourism - Explore Dehradun</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #004466;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .spot {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .spot:hover {
+            transform: scale(1.05);
+        }
+        .spot img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .spot-info {
+            padding: 1rem;
+        }
+        .spot-info h3 {
+            margin: 0 0 0.5rem;
+            color: #004466;
+        }
+        .spot-info a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #004466;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .spot-info a:hover {
+            text-decoration: underline;
+        }
+        .map-section, .trip-section {
+            padding: 2rem;
+            background-color: #e6f2ff;
+            text-align: center;
+        }
+        iframe {
+            border: 0;
+            width: 90%;
+            height: 450px;
+            border-radius: 12px;
+        }
+        .trip-frame {
+            margin-top: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+        .trip-frame h3 {
+            color: #004466;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            text-align: left;
+            padding-left: 1rem;
+            color: #333;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .emoji {
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🌄 Explore Dehradun - Top Tourist Spots</h1>
+    </div>
+
+    <div class="gallery">
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/robbers-cave.webp') }}" alt="Robber's Cave">
+            <div class="spot-info">
+                <h3>Robber's Cave</h3>
+                <p>A river cave formation located near Sahastradhara.</p>
+                <a href="https://en.wikipedia.org/wiki/Robber%27s_Cave,_India" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/clocktower.jpg') }}" alt="Clock Tower">
+            <div class="spot-info">
+                <h3>Clock Tower</h3>
+                <p>Iconic monument in the center of Dehradun city.</p>
+                <a href="https://en.wikipedia.org/wiki/Clock_Tower,_Dehradun" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/indianmilitaryacadamy.jpg') }}" alt="IMA">
+            <div class="spot-info">
+                <h3>Indian Military Academy</h3>
+                <p>Famous military training institute for Indian Army officers.</p>
+                <a href="https://en.wikipedia.org/wiki/Indian_Military_Academy" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/FRI.jpg') }}" alt="FRI">
+            <div class="spot-info">
+                <h3>Forest Research Institute</h3>
+                <p>Heritage museum and education center with grand colonial architecture.</p>
+                <a href="https://en.wikipedia.org/wiki/Forest_Research_Institute_(India)" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/Mindrolling Monastery.jpg') }}" alt="Mindrolling Monastery">
+            <div class="spot-info">
+                <h3>Mindrolling Monastery</h3>
+                <p>Peaceful Tibetan Buddhist monastery with beautiful architecture.</p>
+                <a href="https://en.wikipedia.org/wiki/Mindrolling_Monastery" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/DehradunJoo.jpg') }}" alt="Dehradun Zoo">
+            <div class="spot-info">
+                <h3>Dehradun Zoo</h3>
+                <p>Popular zoo with a variety of wildlife and children's attractions.</p>
+                <a href="https://uttarakhandtourism.gov.in/destination/malsi-deer-park" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/BuddhaTemple.jpg') }}" alt="Buddha Temple">
+            <div class="spot-info">
+                <h3>Buddha Temple</h3>
+                <p>Tranquil and spiritual location with a massive stupa and gardens.</p>
+                <a href="https://www.trawell.in/uttarakhand/dehradun/mindrolling-monastery" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+
+        <div class="spot">
+            <img src="{{ url_for('static', filename='img/Sahastradhara.jpg') }}" alt="Sahastradhara">
+            <div class="spot-info">
+                <h3>Sahastradhara</h3>
+                <p>Natural sulphur spring, scenic waterfalls, and caves.</p>
+                <a href="https://en.wikipedia.org/wiki/Sahastradhara" target="_blank">🔗 Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-section">
+        <h2>🗺️ Nearby Cafes, Parks, Temples in Dehradun</h2>
+        <iframe
+            src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBOtXBTnWqPNOejz88xNNxLEqHI0FV3Wgw&q=cafes+parks+temples+near+Dehradun"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="trip-section">
+        <h2>🧳 Plan Your Trip to Dehradun</h2>
+
+        <div class="trip-frame">
+            <h3>🏨 Top Hotels in Dehradun</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBOtXBTnWqPNOejz88xNNxLEqHI0FV3Wgw&q=hotels+in+Dehradun"
+                allowfullscreen>
+            </iframe>
+            <ul>
+                <li><span class="emoji">🌟</span><strong>Hotel Madhuban</strong> – 97 Rajpur Road, Dehradun</li>
+                <li><span class="emoji">🌟</span><strong>Four Points by Sheraton</strong> – 152/4 Jakhan, Rajpur Road</li>
+                <li><span class="emoji">🌟</span><strong>Seyfert Sarovar Premiere</strong> – Canal Road, Dehradun</li>
+            </ul>
+        </div>
+
+        <div class="trip-frame">
+            <h3>🍽️ Top Cafes & Restaurants</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBOtXBTnWqPNOejz88xNNxLEqHI0FV3Wgw&q=restaurants+in+Dehradun"
+                allowfullscreen>
+            </iframe>
+            <ul>
+                <li><span class="emoji">☕</span><strong>Kalsang Café</strong> – 88-A Rajpur Road, Dehradun</li>
+                <li><span class="emoji">☕</span><strong>Orchard Restaurant</strong> – Near Sai Mandir, Rajpur</li>
+                <li><span class="emoji">☕</span><strong>Town Table</strong> – Astley Hall, Rajpur Road</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
