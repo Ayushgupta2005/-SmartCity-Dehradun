@@ -24,7 +24,7 @@ python app.py
 ```
 
 ### 3. Open in Browser
-Visit: `http://127.0.0.1:5000/`
+Visit: https://smartcity-dehradun.onrender.com
 
 ---
 
