@@ -2,16 +2,16 @@
 
 This is a Smart City management platform for Dehradun, built using Python (Flask) and HTML/CSS. It includes:
 
-## ✅ Modules
-1. 🚦 **Traffic Management** – Live traffic view using Google Maps API  
-2. 🗑️ **Waste Management**
+##  Modules
+1.**Traffic Management** – Live traffic view using Google Maps API  
+2.**Waste Management**
    - **User Panel** – Report bin location
    - **Admin Panel** – Mark bins as collected  
 3. 🌤️ **Weather Management** – Live weather via OpenWeatherMap API
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ### 1. Install Requirements
 ```bash
@@ -28,18 +28,16 @@ Visit: https://smartcity-dehradun.onrender.com
 
 ---
 
-## 🔑 API Keys Used
-- Google Maps (Traffic): `AIzaSyBOtXBTnWqPNOejz88xNNxLEqHI0FV3Wgw`
-- OpenWeatherMap: `6c0c7b15414b862d3797ea38e1d22877`
+##  API Keys Used
+- Google Maps (Traffic)
+- OpenWeatherMap
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 - `app.py` – Flask backend
 - `templates/` – HTML files
 - `static/` – CSS & images
 - `db.sqlite3` – SQLite DB for waste reports
-
----
 
 Developed as part of Semester 4 – Software Engineering Project.
