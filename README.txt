@@ -3,11 +3,11 @@
 This is a Smart City management platform for Dehradun, built using Python (Flask) and HTML/CSS. It includes:
 
   Modules
-1.Traffic Management** – Live traffic view using Google Maps API  
-2.Waste Management**
-   - User Panel** – Report bin location
-   - Admin Panel** – Mark bins as collected  
-3. Weather Management** – Live weather via OpenWeatherMap API
+1.Traffic Management – Live traffic view using Google Maps API  
+2.Waste Management
+   - User Panel – Report bin location
+   - Admin Panel – Mark bins as collected  
+3. Weather Management – Live weather via OpenWeatherMap API
 
 ---
 
