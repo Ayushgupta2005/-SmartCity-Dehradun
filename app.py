@@ -3,11 +3,12 @@ import requests
 import sqlite3
 import requests
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
 # Weather API Key
-WEATHER_API_KEY = "55a0744cbdde0e9ab92842d85bcf157b"
+WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
 
 @app.route("/")
 def home():
@@ -65,7 +66,7 @@ def waste_admin():
 def tourism():
     return render_template("tourism.html")
 
-EWS_API_KEY = "be6fcde483ad483e91ab40baa4696fbd"
+EWS_API_KEY = os.getenv("NEWS_API_KEY")
 
 @app.route("/news")
 def news():
