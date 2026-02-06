@@ -1,40 +1,39 @@
-# Smart City Dehradun – Software Engineering Project
+ Smart City Dehradun – Software Engineering Project
 
 This is a Smart City management platform for Dehradun, built using Python (Flask) and HTML/CSS. It includes:
 
-##  Modules
-1.**Traffic Management** – Live traffic view using Google Maps API  
-2.**Waste Management**
-   - **User Panel** – Report bin location
-   - **Admin Panel** – Mark bins as collected  
-3. **Weather Management** – Live weather via OpenWeatherMap API
+  Modules
+1.Traffic Management** – Live traffic view using Google Maps API  
+2.Waste Management**
+   - User Panel** – Report bin location
+   - Admin Panel** – Mark bins as collected  
+3. Weather Management** – Live weather via OpenWeatherMap API
 
 ---
 
-## How to Run
+ How to Run
 
-### 1. Install Requirements
+ 1. Install Requirements
 ```bash
 pip install flask requests
 ```
 
-### 2. Run the App
+ 2. Run the App
 ```bash
 python app.py
 ```
-
-### 3. Open in Browser
+ 3. Open in Browser
 Visit: https://smartcity-dehradun.onrender.com
 
 ---
 
-##  API Keys Used
+  API Keys Used
 - Google Maps (Traffic)
 - OpenWeatherMap
 
 ---
 
-##  Folder Structure
+  Folder Structure
 - `app.py` – Flask backend
 - `templates/` – HTML files
 - `static/` – CSS & images
